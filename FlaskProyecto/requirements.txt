@@ -1,0 +1,9 @@
+Flask
+pandas
+scikit-learn
+bcrypt
+matplotlib
+numpy
+pyplot
+
+Flask-SQLAlchemy

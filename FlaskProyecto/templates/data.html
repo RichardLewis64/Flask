@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Cargar Datos</h2>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Cargar</button>
+</form>
+{% if data %}
+<h3>Datos Cargados:</h3>
+{{ data|safe }}
+{% endif %}
+{% if error %}
+<h3>Error:</h3>
+<p>{{ error }}</p>
+{% endif %}
+{% endblock %}

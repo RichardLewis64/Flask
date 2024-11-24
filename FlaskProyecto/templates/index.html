@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% with messages = get_flashed_menssages()%}
+{% if messages%}
+{% for mesage in messages%}
+   <p>{{mesage}}</p>
+{% end for %}
+{% end if %}
+{% end with %}
+{% block content %}
+
+<form action=/"add_contact" method= "POST">
+
+    <input type="text" id="fullname" name="fullname" required>
+    <input type="text" id="phone" name="phone" required>
+    <input type="text" id="email" name="email" required>
+    <button type='submit'>
+        save
+    </button>    
+
+</form>    
+<h1>Bienvenido al Sistema de Predicción de Ventas</h1>
+#<p>Has iniciado sesión como {{ session['username'] }}</p>
+#<a href="{{ url_for('logout') }}">Cerrar Sesión</a>
+{% endblock %}

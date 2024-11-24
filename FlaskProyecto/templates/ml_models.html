@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Modelos de Machine Learning</h2>
+<form method="POST">
+    <label for="model_type">Selecciona el modelo:</label>
+    <select id="model_type" name="model_type">
+        <option value="linear_regression">Regresión Lineal</option>
+        <option value="clustering">Clustering</option>
+        <option value="logistic_regression">Regresión Logística</option>
+    </select>
+    <button type="submit">Entrenar y Predecir</button>
+</form>
+{% if result %}
+<p>{{ result }}</p>
+{% endif %}
+{% endblock %}
